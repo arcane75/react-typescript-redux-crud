@@ -1,0 +1,96 @@
+$background: #efefef;
+$lfs-blue: #006ac6;
+$lfs-yellow: #a77b02;
+$lfs-grey: #75787b;
+$lfs-red: #c51b1b;
+$lfs-black: #000;
+
+
+.table-latitude {
+    width: 100%;
+
+    caption {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $lfs-yellow;
+        text-align: center;
+    }
+
+    thead {
+        border-top: 2px solid $lfs-yellow;
+        border-bottom: 2px solid $lfs-yellow;
+
+        th {
+            text-transform: uppercase;
+            text-align: center;
+            padding: 10px;
+            color: $lfs-blue;
+            border: 1px solid #F1F1F1;
+        }
+    }
+
+    tbody {
+        tr {
+            border-bottom: 1px solid #F1F1F1;
+            color: $lfs-grey;
+
+            td {
+                padding: 10px;
+                border: 1px solid #F1F1F1;
+                text-align: justify;
+            }
+
+            th {
+                padding-left: 10px;
+                border: 1px solid #F1F1F1;
+            }
+        }
+    }
+
+    tfoot {
+        color: $lfs-yellow;
+        font-style: italic;
+        border-bottom: 2px solid $lfs-yellow;
+
+        tr {
+            td {
+                padding: 10px;
+                border: 1px solid #F1F1F1;
+            }
+        }
+    }
+}
+
+@mixin button-bg($bg) {
+    background: $bg;
+
+    &:hover {
+        background: darken($bg, 8%);
+        transition: all 0.3s ease;
+    }
+
+    &:active {
+        background: darken($bg, 25%);
+    }
+}
+
+.btn {
+    color: $lfs-black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-Update {
+   color: $lfs-yellow;
+   margin-right: 5px;
+}
+.btn-add{
+    padding: 10px;
+}
+.btn-Delete {
+   color: $lfs-red;
+}
+
+.btn-position{
+    display: flex;
+}
