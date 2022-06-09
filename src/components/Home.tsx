@@ -48,10 +48,10 @@ const Home = () => {
     };
 
     return (
-        <div className="container">
-            <div className="panel panel-default">
-                <div className="panel-heading">
-                    <h1>Explore CRUD Operation</h1>
+        <div className="home-container">
+            <div className="panel panel-default ">
+                <div className="panel-heading ">
+                    <h1 >Explore CRUD Operation</h1>
                 </div>
                 <div>
                     <button onClick={handleAdd} className="btn btn-add">ADD Information</button>

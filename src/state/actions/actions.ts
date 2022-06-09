@@ -74,6 +74,12 @@ export const UpdatePost = (post: any, id: number) => {
     }
 }
 
+export const loginUser = (userData: any, history: any) => (dispatch: any) => {
+    dispatch({ type: ActionType.LOADING_UI })
+
+    
+}
+
 
 type x = ReturnType<typeof getPosts>;
 type y = ReturnType<typeof deletePostById>;
