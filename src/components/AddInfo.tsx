@@ -16,8 +16,8 @@ const AddInfo = () => {
         title: string;
         body: string
     }>({
-        id: 0,
-        userId: 0,
+        id: 110,
+        userId: 110,
         title: "",
         body: ""
     });

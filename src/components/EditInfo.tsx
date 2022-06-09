@@ -6,40 +6,37 @@ import "./AddInfoStyle.scss";
 
 const EditInfo = () => {
 
-    // interface info {
-    //     id: number,
-    //     userId: number,
-    //     title: string,
-    //     body: string,
-    // }
     let dispatch = useDispatch();
     let navigate = useNavigate();
-    let { id } = useParams();
+
+
+    let { id }: any = useParams();
+
     // const {post} = useSelector((state) => state);
 
     useEffect(() => {
-        dispatch(GetPostId(id))
+        dispatch<any>(GetPostId(id))
     }, []);
 
-    // useEffect(() => {
-    //     if(post){
-    //         setState({...post})
-    //     }
-    // }, [post]);
+    const [state, setState] = useState<{
+        title: string;
+        body: string
+    }>({
+        title: "",
+        body: ""
+    })
 
-
-    const [state, setState] = useState({});
-    console.log("state", state);
+    // console.log("state", state);
     const { title, body } = state;
 
-    const handleChange = (e) => {
+    const handleChange = (e: any) => {
         let { name, value } = e.target;
         setState({ ...state, [name]: value });
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: any) => {
         e.preventDefault();
-        dispatch(UpdatePost(state, id));
+        dispatch<any>(UpdatePost(state, id));
         navigate("/");
     }
     return (
@@ -54,7 +51,7 @@ const EditInfo = () => {
                             <input value={title || ""}
                                 type="text"
                                 name="title"
-                                placeholder="Add Title" className="input_field" required
+                                placeholder="Add Title" className="input_field"
                                 onChange={handleChange}
                             />
                         </div>
@@ -62,7 +59,7 @@ const EditInfo = () => {
                             <input value={body || ""}
                                 type="text"
                                 name="body"
-                                placeholder="Add Description" className="input_field" required
+                                placeholder="Add Description" className="input_field"
                                 onChange={handleChange}
                             />
                         </div>

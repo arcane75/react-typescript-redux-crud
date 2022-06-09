@@ -9,7 +9,7 @@ const getPosts = (posts: any) => ({
 
 const deletePostById = (id: number) => ({
     type: ActionType.DELETE,
-    payload:  id ,
+    payload: id,
 })
 
 const addedPost = () => ({
@@ -23,7 +23,7 @@ const updatePostById = (id: number) => ({
 
 const getPostById = (post: any) => ({
     type: ActionType.UPDATE,
-    payload:  post ,
+    payload: post,
 })
 
 export const loadPosts = () => {
@@ -55,7 +55,7 @@ export const AddPost = (post: any) => {
     }
 }
 
-export const GetPostId = (id:number) => {
+export const GetPostId = (id: number) => {
     return function (dispatch: any) {
         httpReq.get(`/postdata/${id}`).then((res) => {
             //   console.log('Update post', res);
@@ -65,10 +65,10 @@ export const GetPostId = (id:number) => {
     }
 }
 
-export const UpdatePost = (post: any, id:number) => {
+export const UpdatePost = (post: any, id: number) => {
     return function (dispatch: any) {
         httpReq.put(`/postdata/${id}`, post).then((res) => {
-              console.log('Update post', res);
+            console.log('Update post', res);
             dispatch(updatePostById(id));
         }).catch(err => console.log(err));
     }

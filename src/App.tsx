@@ -13,7 +13,6 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/addinfo' element={<AddInfo />} />
         <Route path='/editinfo/:id' element={<EditInfo />} />
-
       </Routes>
       </BrowserRouter>
     </div>

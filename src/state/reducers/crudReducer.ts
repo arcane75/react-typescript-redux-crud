@@ -20,11 +20,6 @@ const crudReducer = (state = initialState, action: Action) => {
             return {
                 ...state,
             }
-        // state.posts.filter(item => item !== action.payload.id);
-        // {
-        //     ...state,
-
-        // }
 
         case ActionType.POST:
             return {
@@ -41,8 +36,7 @@ const crudReducer = (state = initialState, action: Action) => {
                 ...state,
                 post: action.payload,
             }
-        // case ActionType.DELETE:
-        //     return state.filter(item => item.id !== action.payload.id);
+
         default:
             return state;
 
